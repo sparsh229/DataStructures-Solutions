@@ -1,5 +1,6 @@
+import java.io.*;
 import java.util.*;
-public class kthMinMaxElement {
+class GFG {
 	public static void main (String[] args) {
 		Scanner sc=new Scanner(System.in);
 		
@@ -19,6 +20,13 @@ public class kthMinMaxElement {
 		    System.out.println(kthSmallest(arr, 0, n-1, k));
 		}
 	}
+	
+
+    
+ // } Driver Code Ends
+
+
+//User function Template for Java
 
 public static int kthSmallest(int[] arr, int l, int r, int k) 
 { 
@@ -29,7 +37,8 @@ public static int kthSmallest(int[] arr, int l, int r, int k)
     else {
     	return kthSmallest(arr,l,pi-1,k);
     }
-}
+    
+} 
 public static int partition(int []a,int l,int r) {
 	int pivot=r;
 	int i=l-1;
@@ -51,13 +60,10 @@ public static int partition(int []a,int l,int r) {
 	a[i+1]=temp;
 	return i+1;
 }
-public static int kthLargest(int[]a,int l,int r,int k) {
-	int pi=partition(a,l,r);
-	if(pi-1==k) {
-		return a[pi];
-	}
-	else {
-		return kthLargest(a,pi+1,r,k);
-	}
-}
+
+
+
+// { Driver Code Starts.
+
+
 }
